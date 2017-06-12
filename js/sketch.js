@@ -11,7 +11,7 @@ function setup() {
   canvas = document.getElementById("defaultCanvas");
   context = canvas.getContext('2d');
 
-  player.addImage(playerImg);
+  image (playerImg);
 
 }
 
