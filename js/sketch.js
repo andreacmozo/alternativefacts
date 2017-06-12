@@ -4,19 +4,19 @@ var canvas;
 var context;
 
 function preload () {
-	playerImg = loadImage('/assets/donaldthepig.png');
+	playerImg = loadImage('/images/donaldthepig.png');
 }
 
 function setup() {
   canvas = document.getElementById("defaultCanvas");
   context = canvas.getContext('2d');
-  
+
   player.addImage(playerImg);
-  
+
 }
 
 function draw() {
  player.position.x = mouseX;
  player.position.y = mouseY;
- 
+
 }
