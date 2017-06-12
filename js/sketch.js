@@ -4,7 +4,7 @@ var canvas;
 var context;
 
 function preload () {
-	playerImg = loadImage('/images/donaldthepig.png');
+	playerImg = loadImage('../images/donaldthepig.png');
 }
 
 function setup() {
