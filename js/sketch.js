@@ -1,22 +1,32 @@
-var player;
-var playerImg;
-var canvas;
-var context;
+var pig;
+var pigImg;
 
-function preload () {
-	playerImg = loadImage("https://raw.githubusercontent.com/andreacmozo/alternativeworld/master/images/donaldthepig.png");
+function preload() {
+pigImg = loadImage("images/donaldthepig.png");
 }
 
 function setup() {
-  canvas = document.getElementById("defaultCanvas");
-  context = canvas.getContext('2d');
+  createCanvas(1000,400);
 
-  image (playerImg);
+  pig = createSprite (width/2, height/2);
+  pig.addImage(pigImg)
 
 }
 
 function draw() {
- player.position.x = mouseX;
- player.position.y = mouseY;
+  background(211,211,211);
+  drawSprites();
+  }
 
+function keyPressed() {
+  if (keyCode == RIGHT_ARROW) {
+    pig.setSpeed(1.5, 0);
+  }
+  else if (keyCode == LEFT_ARROW) {
+    pig.setSpeed(1.5, 180);
+  }
+  else if (key == ' ') {
+    pig.setSpeed(0, 0);
+  }
+  return false;
 }
