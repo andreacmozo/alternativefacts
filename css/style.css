@@ -1,0 +1,13 @@
+body{			
+	text-align: center;
+}
+
+#defaultCanvas {
+	background: #d3d3d3;
+	margin-top: 100px;
+}
+.myP5 {
+left:30%;
+height:80%;
+position:fixed;
+}
