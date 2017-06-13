@@ -8,14 +8,19 @@ pigImg = loadImage("images/donaldthepig.png");
 function setup() {
   createCanvas(1000,400);
 
-  pig = createSprite (width/2, height/2);
+  pig = createSprite (200, 200, width/2, height/2);
   pig.addImage(pigImg)
-
 }
 
 function draw() {
   background(211,211,211);
   drawSprites();
+
+  if (pig.overlapPixel(1300,200)){
+   pig.position.x = 200;
+   pig.position.y = 200;
+   pig.setSpeed(0, 0);
+    }
   }
 
 function keyPressed() {
